@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1 class="text-xl font-bold">Conditional Rendering</h1>
-    <div class="flex p-4">
+    <div class="flex px-4 pt-4">
       <div class="w-1/2 border-2">
         <h2 class="text-lg font-semibold text-red-300">v-if</h2>
         <h3 v-if="awesome">Vue is awesome!</h3>
@@ -17,6 +17,17 @@
           <p>Paragraph 1</p>
           <p>Paragraph 2</p>
         </template>
+      </div>
+    </div>
+    <div class="flex px-4">
+      <div class="w-1/2 border-2">
+        <h2 class="text-lg font-semibold text-red-300">v-else</h2>
+        <div v-if="Math.random() > 0.5">
+          Now you see me
+        </div>
+        <div v-else>
+          Now you don't
+        </div>
       </div>
     </div>
   </div>
