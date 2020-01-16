@@ -29,6 +29,13 @@
           Now you don't
         </div>
       </div>
+      <div class="w-1/2 border-2">
+        <h2 class="text-lg font-semibold text-red-300">v-else-if</h2>
+        <div v-if="type === 'A'">A</div>
+        <div v-else-if="type === 'B'">B</div>
+        <div v-else-if="type === 'C'">C</div>
+        <div v-else>Not A/B/C</div>
+      </div>
     </div>
   </div>
 </template>
@@ -39,7 +46,8 @@ export default {
   data() {
     return {
       awesome: true,
-      ok: true
+      ok: true,
+      type: "B"
     };
   }
 };
