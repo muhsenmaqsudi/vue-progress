@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="bg-blue-100">
+  <div id="app" class="h-screen w-full bg-blue-100">
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link :to="{ name: 'conditional-rendering' }">
