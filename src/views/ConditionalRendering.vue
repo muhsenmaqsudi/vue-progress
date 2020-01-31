@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="p-8">
     <h1 class="text-xl font-bold">Conditional Rendering</h1>
     <div class="flex px-4 pt-4">
       <div class="w-1/2 border-2">
@@ -74,12 +74,14 @@
             them.” Add a key attribute with unique values:
           </p>
         </div>
-        <button
-          class="bg-blue-300 p-1 rounded-lg hover:bg-blue-500"
-          @click="toggleLoginType"
-        >
-          Toggle login type
-        </button>
+        <div class="pb-2">
+          <button
+            class="bg-blue-300 p-1 rounded-lg hover:bg-blue-500"
+            @click="toggleLoginType"
+          >
+            Toggle login type
+          </button>
+        </div>
       </div>
       <div class="w-1/2 border-2">
         <h2 class="text-lg font-semibold text-red-300">v-show</h2>
@@ -93,6 +95,33 @@
           Note that v-show doesn’t support the template element, nor does it
           work with v-else.
         </p>
+      </div>
+    </div>
+    <div class="flex px-4">
+      <div class="w-2/2 border-2">
+        <h2 class="text-lg font-semibold text-red-300">v-if vs v-show</h2>
+        <ul>
+          <li>
+            v-if is “real” conditional rendering because it ensures that event
+            listeners and child components inside the conditional block are
+            properly destroyed and re-created during toggles.
+          </li>
+          <li>
+            v-if is also lazy: if the condition is false on initial render, it
+            will not do anything - the conditional block won’t be rendered until
+            the condition becomes true for the first time.
+          </li>
+          <li>
+            In comparison, v-show is much simpler - the element is always
+            rendered regardless of initial condition, with CSS-based toggling.
+          </li>
+          <li>
+            Generally speaking, v-if has higher toggle costs while v-show has
+            higher initial render costs. So prefer v-show if you need to toggle
+            something very often, and prefer v-if if the condition is unlikely
+            to change at runtime.
+          </li>
+        </ul>
       </div>
     </div>
   </div>
