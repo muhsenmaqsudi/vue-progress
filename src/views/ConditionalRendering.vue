@@ -81,6 +81,19 @@
           Toggle login type
         </button>
       </div>
+      <div class="w-1/2 border-2">
+        <h2 class="text-lg font-semibold text-red-300">v-show</h2>
+        <h1 v-show="ok">Hello!</h1>
+        <p>
+          The difference is that an element with v-show will always be rendered
+          and remain in the DOM; v-show only toggles the display CSS property of
+          the element.
+        </p>
+        <p>
+          Note that v-show doesn’t support the template element, nor does it
+          work with v-else.
+        </p>
+      </div>
     </div>
   </div>
 </template>
